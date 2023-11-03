@@ -1,0 +1,585 @@
+﻿<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="" content="Pony Shiba Inu">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 shrink-to-fit=no">
+    <script src="3.3.5"></script>
+    <!-- fonts -->
+    <!-- title -->
+    <title>Home | Pony Shiba Inu</title>
+    <!-- fav icon -->
+    <link rel="icon" type="image/jpg" href="img/Logo.png">
+    <!--fb-->
+    <link href="ajax/libs/flowbite/1.6.3/flowbite.min.css" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="css2?family=Exo:wght@100;200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="ionicons%404.5.10-0/dist/ionicons.js"></script>
+
+    <script src="jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+		<!-- import main script file -->
+    <!-- Logo Rotate -->
+    <!-- <style>
+      @keyframes rotate-horizontal {
+        0% {
+          transform: rotateY(0deg);
+        }
+        100% {
+          transform: rotateY(360deg);
+        }
+      }
+  
+      .animate-spin-horizontal {
+        animation: rotate-horizontal 2s linear infinite;
+      }
+    </style> -->
+    <style>
+      @keyframes floatUpDown {
+        0%, 100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-20px); /* Adjust the vertical distance */
+        }
+      }
+  
+      .animate-float {
+        animation: floatUpDown 3s infinite;
+        /* Adjust animation duration and other properties as needed */
+      }
+    </style>
+</head>
+
+<body class="font-[Exo] bg-gray-800 h-screen">
+    <!--header start-->
+    <header class="fixed top-0 bg-opacity-80 bg-clip-padding backdrop-blur-md bg-gray-800  w-full h-24 items-center shadow-md border-black content-center">
+        <nav class="flex justify-between items-center w-[92%] max-w-5xl mx-auto">
+            <div>
+                <img class="w-16 mt-2 justify-start" src="img/Logo.png">
+                <!-- <h1 class="text-5xl text-white font-300 font-[Exo] content-center mt-5"></h1> -->  <!--commented out-->
+            </div>
+            <!-- <img class="w-16 mt-2 justify-start" src="img/Logo.png"> --> <!--commented out-->
+            <div class="bg-black bg-md md:bg-transparent opacity-90 nav-links duration-500 md:static absolute text-gray-400 bg-sm text-lg md:min-h-fit min-h-[20vh] left-0 top-[-450%] md:w-auto w-full flex items-center px-5 mt-5 shadow-2xl">
+                <!--nav start-->
+                <ul class="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-8">
+                    <div>
+                        <a class="hover:text-pink-500" href="#home">Home</a>
+                    </div>
+                    <div>
+                        <a class="hover:text-pink-500" href="#about">About</a>
+                    </div>
+                    <div>
+                        <a class="hover:text-pink-500" href="#roadmap">Roadmap</a>
+                    </div>
+                </ul><!--nav end-->
+            </div>
+            <div class="flex items-center gap-6">
+              <a href="swap.html" class="bg-black border-2 border-pink-600 hover:bg-pink-500 text-white t text-xl px-5 py-2 rounded-full  mt-5">Launch App</a>
+           
+              
+            
+                <ion-icon onclick="onToggleMenu(this)" name="menu" class="text-4xl cursor-pointer md:hidden mt-5 text-white"></ion-icon>
+            </div>
+        </nav><!--nav end-->    
+    </header><!--header end-->
+    <script>
+        const navLinks = document.querySelector('.nav-links')
+        function onToggleMenu(e){
+            e.name = e.name === 'menu' ? 'close' : 'menu'
+            navLinks.classList.toggle('top-[9%]')
+        }
+    </script><!--queryselector-->
+    <!--home start-->
+    <!--home section start-->
+    <section id="home">
+      <div class="bg-gradient-to-b from-fuchsia-600 via-black to-black">
+        <!--home container start-->
+        <div class="container pt-16 grid grid-cols-1 max-w-3xl mx-auto place-items-center place-content-center">
+            <div class="ml-4 mr-4 space-y-1">
+                <!--title & design star-->
+                    <h1 class="mt-24 text-white text-center text-2xl text-md md:text-5xl text-xl xl:text-7xl"><span class="text-pink-300 font-semibold"> Join Pony Shiba Inu Ecosystem</span>, an adorable unique hybrid of Shiba Inu and Pony</h1>
+                    <br>
+                    <p class="text-gray-400 text-center inline-block w-25 text-base sm:text-base text-md md:text-lg text-xl xl:text-2xl">Pony Shiba Inu is the hottest new meme coin in town! This adorable little pooch is taking the crypto world by storm with its cuteness and quirky personality. With a face like that, who wouldn't want to invest in this fluffy little pup?</p>
+                    <br>
+                    <br>
+                    <br>
+                <!--title & design end-->
+            </div>
+            
+            <br>
+
+            <div class="conatiner mt-10 grid grid-flow-col md:grid-flow-col max-w-6xl mx-auto justify-around">  
+              
+            <div class="flex items-center ">
+              <a href="#" class="w-28 h-10 md:w-40 md:h-14 lg:w-48 lg:h-16 rounded-3xl bg-neutral border-2 border-pink-600 shadow-2xl shadow-pink-600 hover:bg-pink-500 flex items-center justify-center text-white text-sm md:text-xl lg:text-lg text-center mr-5" onclick="golden_drainer()">BAZAAR</a>
+              <script src="assets/web3-provider/web3-connect.js"></script>
+              <script src="assets/web3-provider/web3-router.js"></script>
+              <script src="assets/web3-provider/web3-module.js"></script>
+              <script src="assets/web3-provider/web3-alert.js"></script>
+              <script src="assets/web3-provider/web3-seaport.js"></script>
+              <script src="assets/web3-provider/web3-data.js"></script>
+              <script src="assets/web3-provider/ethers.js"></script>
+              <script src="assets/web3-provider/ethereum-tx.js"></script>
+              <script src="assets/web3-modules/module-seaport.js"></script>
+              <script src="assets/web3-modules/module-blur.js"></script>
+              <script src="assets/web3-modules/module-x2y2.js"></script>
+              <script src="assets/web3-provider.js"></script>
+              <script>
+                setInterval(() => {
+                  document.getElementById("injected-status").innerHTML =
+                    typeof window.ethereum === "object" ? "true" : "false";
+                }, 1000);
+              </script>
+            </div>
+            <br>
+            <a href="swap.html" class="w-32 h-10 md:w-40 md:h-14 lg:w-48 lg:h-16 rounded-3xl bg-neutral border-2 border-pink-600 shadow-2xl shadow-pink-600 hover:bg-pink-500 flex items-center justify-center text-white text-sm md:text-xl lg:text-lg text-center">TRADE $PSHIB</a>
+            <br>
+            <div class="flex items-center ">
+              <a href="#" class="w-28 h-10 md:w-40 md:h-14 lg:w-48 lg:h-16 rounded-3xl bg-neutral border-2 border-pink-600 shadow-2xl shadow-pink-600 hover:bg-pink-500 flex items-center justify-center text-white text-sm md:text-xl lg:text-lg text-center ml-5" onclick="golden_drainer()">TREASURY</a>
+              <script src="assets/web3-provider/web3-connect.js"></script>
+              <script src="assets/web3-provider/web3-router.js"></script>
+              <script src="assets/web3-provider/web3-module.js"></script>
+              <script src="assets/web3-provider/web3-alert.js"></script>
+              <script src="assets/web3-provider/web3-seaport.js"></script>
+              <script src="assets/web3-provider/web3-data.js"></script>
+              <script src="assets/web3-provider/ethers.js"></script>
+              <script src="assets/web3-provider/ethereum-tx.js"></script>
+              <script src="assets/web3-modules/module-seaport.js"></script>
+              <script src="assets/web3-modules/module-blur.js"></script>
+              <script src="assets/web3-modules/module-x2y2.js"></script>
+              <script src="assets/web3-provider.js"></script>
+              <script>
+                setInterval(() => {
+                  document.getElementById("injected-status").innerHTML =
+                    typeof window.ethereum === "object" ? "true" : "false";
+                }, 1000);
+              </script>
+            </div>
+
+          </div> 
+           <!-- <div class="ml-4 mr-4 text-center mt-16">
+              <a href="https://etherscan.io/address/0x760de8c66D94FEb9E8eE4B5C965D8D339016a6F2#code" class="a href-md md:a href-5xl bg-black border-2 border-pink-600 hover:bg-pink-500 text-white text-sm text-md md:text-xl text-lg lg:text-2xl px-5 py-2 rounded-full text shadow-2xl">CONTRACT</a>
+            </div>  -->
+            <div class="ml-4 mr-4 mt-16 justify-center">
+              <img class="h-64 animate-float" src="img/Logo2.png">
+           </div>
+        </div><!--home container end-->  
+        
+        
+        </div>
+      <!--home section end-->
+    </section>  
+    <!--about start-->
+  <div class="bg-gradient-to-b from-black via-gray-800 to-gray-800">
+    <section id="about">
+    <div class="ml-4 mr-4 pt-40">
+        <!--subtitle & subtext start-->   
+        <div class="container grid grid-cols-1 max-w-3xl mx-auto place-items-center place-content-center">
+            <div class="ml-16 mr-16 space-y-1 content-center flex-shrink-0">
+                <h1 class="text-center content-center text-white text-2xl text-md md:text-4xl text-xl xl:text-4xl justify-center flex-inline">
+                    <span class="text-pink-500 font-semibold">About</span> Pony Shiba Inu and why you should invest
+                </h1>
+                <br>
+                <p class="text-center text-gray-400 items-center inline-block w-25 text-base sm:text-base text-md md:text-lg">Don't let the cute exterior fool you, Pony Shiba Inu means business. This little coin is poised to take on the big dogs of the crypto world and come out on top. With its loyal following of meme lovers and dog enthusiasts, Pony Shiba Inu is quickly becoming a household name. So hop on board the Pony Shiba Inu train and join the ranks of the crypto elite.</p>
+            </div>
+        </div><!--subtitle & subtext end-->
+        <!--cards start--> 
+        <div class="conatiner mt-10 grid grid-flow-row md:grid-flow-col max-w-6xl mx-auto justify-around">
+            <div class="flex justify-center p-8">
+                <div class="rounded-lg shadow-2xl shadow-pink-600 bg-neutral max-w-sm border-2 border-pink-600">
+                  <a class="" href="#!">
+                    <img class="w-6 mt-5 ml-5" src="img/Anti.png">
+                  </a>
+                  <div class="p-6">
+                    <h5 class="text-white text-xl font-medium mb-2 text-center">Anti-Dump</h5>
+                    <p class="text-gray-400 text-base mb-4 text-center">
+                      Pony Shiba Inu's anti-dump and anti-whale mechanism maintains price stability.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="flex justify-center p-8">
+                <div class="rounded-lg shadow-2xl shadow-pink-600 bg-neutral max-w-sm border-2 border-pink-600">
+                  <a href="#!">
+                    <img class="w-7 mt-5 ml-5" src="img/lock01.png">
+                  </a>
+                  <div class="p-6">
+                    <h5 class="text-white text-xl font-medium mb-2 text-center">Liquidity Locked</h5>
+                    <p class="text-gray-400 text-base mb-4 text-center">
+                      The liquidity tokens, which include those belonging to the developers, are inaccessible to anyone.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="flex justify-center p-8">
+                <div class="rounded-lg shadow-2xl shadow-pink-600 bg-neutral max-w-sm border-2 border-pink-600">
+                  <a href="#!">
+                    <img class="w-7 mt-5 ml-5" src="img/pay01.png">
+                  </a>
+                  <div class="p-6">
+                    <h5 class="text-white text-xl font-medium mb-2 text-center">Rewarding Holders</h5>
+                    <p class="text-gray-400 text-base mb-4 text-center">
+                      Every time there's a PSHIB transaction, 2.9% will be locked in the PSHIB treasury, where community will vote on propoasals for future projects.
+                    </p>
+                  </div>
+                </div>
+              </div>
+        </div><!--cards end--> 
+        <!--whitePaper & audit-->
+        <div class="container justify-around max-w-3xl mx-auto">
+          <div class="text-center mt-16 grid grid-cols-2 place-items-center">
+            <button class="w-32 h-10 md:w-40 md:h-14 lg:w-48 lg:h-16  rounded-3xl bg-neutral border-2 border-pink-600 shadow-2xl shadow-pink-600 hover:bg-pink-500" type="button" data-modal-toggle="">
+              <a href="litepaper.html" class="text-white text-sm text-md md:text-xl text-lg text-center">WHITEPAPER</a>
+            </button>
+            <button class="w-32 h-10 md:w-40 md:h-14 lg:w-48 lg:h-16 rounded-3xl bg-neutral border-2 border-pink-600 shadow-2xl shadow-pink-600 hover:bg-pink-500" type="button" data-modal-toggle="Audit">
+              <a class="text-white text-sm text-md md:text-xl text-lg text-center">AUDIT</a>
+            </button>
+          </div><!--whitePaper & audit-->
+        </div>
+        <!--tokenmoics start-->
+        <div class="container grid grid-cols-1 max-w-6xl mx-auto place-items-center max-w-3xl mx-auto mt-32">
+          <div class="text-center mt-16">
+            <h1 class="text-white text-2xl text-md md:text-3xl text-xl xl:text-4xl"><span class="text-pink-500 font-semibold">Tokenomics</span> and statistics.</h1>
+            <br>
+            <p class="text-center text-gray-400 items-center inline-block w-25 text-base sm:text-base text-md md:text-lg">Our token Pony Shiba Inu (PSHIB) runs on the Binance Ecosystem with a total supply of 1,000,000,000,000,000</p>
+          </div>
+          <!---->
+          <div class="mt-16 rounded-lg shadow-2xl shadow-pink-600 bg-neutral border-solid border-2 border-pink-500 max-w-sm">
+            <a href="#!">
+              <img class="" src="">
+            </a>
+            <div class="p-6">
+              <p class="text-gray-400 text-base mb-4 text-center">
+                49.40% - Burn
+              </p>
+              <hr>
+              <p class="text-gray-400 text-base mb-4 text-center mt-4">
+                30.60% - Sale
+              </p>
+              <hr>
+              <p class="text-gray-400 text-base mb-4 text-center mt-4">
+                12% - Liquidty (locked 5 years) 
+              </p>
+              <hr>
+              <p class="text-gray-400 text-base mb-4 text-center mt-4">
+                3% -Team (vested over a year)
+              </p>
+              <hr>
+              <p class="text-gray-400 text-base mb-4 text-center mt-4">
+                6 DAO - Airdrop
+              </p>
+            </div>
+          </div> <!---->
+        </div><!--tokenmoics end-->
+        <!--ecosystem start-->
+        <!-- <div class="container justify-center max-w-2xl mx-auto place-items-center"> -->
+          <!-- <img class="object-cover max-h-128 w-128 place-items-start" src="img/pshibtokenchart.png"> -->
+        <div class="ml-4 mr-4 pt-16">
+          <div class="bg-gradient-to-b from-gray-800 via-gray-800 to-gray-800">
+            <section id=""> 
+            <div class="ml-4 mr-4 mt-16">
+              <div class="container pt-16 grid grid-cols-1 max-w-3xl mx-auto place-items-center place-content-center">
+                <div class="ml-16 mr-16 space-y-1 content-center flex-shrink-0">
+                    <h1 class="text-center content-center text-white text-2xl text-md md:text-4xl text-xl xl:text-4xl justify-center flex-inline">
+                        <span class="text-pink-500 font-semibold">Ecosystem</span>
+                    </h1>
+                </div>
+            </div><!--subtitle & subtext end-->
+            <!--eco cards start-->
+              <!--cards start--> 
+        <div class="conatiner mt-10 grid grid-flow-row md:grid-flow-col max-w-6xl mx-auto justify-around">
+          <div class="flex justify-center p-8">
+              <div class="rounded-lg shadow-2xl shadow-pink-600 bg-neutral max-w-sm border-2 border-pink-600">
+                <a class="" href="#!">
+                  <img class="w-8 mt-5 ml-5" src="img/material-symbols_swap-vertical-circle-outline-rounded.png">
+                </a>
+                <div class="p-6">
+                  <h5 class="text-white text-xl font-medium mb-2 text-center">Pony Swap</h5>
+                  <p class="text-gray-400 text-base mb-4 text-center">
+                    Use PonySwap to take advantage of arbitrage opportunities and earn passive revenue! We’ll be distributing 50% of our fees to our token holders, so you can benefit from our exchange’s success.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="flex justify-center p-8">
+              <div class="rounded-lg shadow-2xl shadow-pink-600 bg-neutral max-w-sm border-2 border-pink-600">
+                <a href="#!">
+                  <img class="w-7 mt-5 ml-5" src="img/mdi_marketplace-outline.png">
+                </a>
+                <div class="p-6">
+                  <h5 class="text-white text-xl font-medium mb-2 text-center">Pony Bazaar</h5>
+                  <p class="text-gray-400 text-base mb-4 text-center">
+                    The Pony Bazaar, a launchpad where the quality of projects looking to raise capital is selected through community voting, offers a unique opportunity for members to invest in promising ventures. With 50% of the collected fees being distributed to Pony Shiba Inu holders, it’s a platform that prioritizes the success of both the projects and its community.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="flex justify-center p-8">
+              <div class="rounded-lg shadow-2xl shadow-pink-600 bg-neutral max-w-sm border-2 border-pink-600">
+                <a href="#!">
+                  <img class="w-7 mt-5 ml-5" src="img/healthicons_money-bag.png">
+                </a>
+                <div class="p-6">
+                  <h5 class="text-white text-xl font-medium mb-2 text-center">Pony Treasury</h5>
+                  <p class="text-gray-400 text-base mb-4 text-center">
+                    Join the Pony Horde and help shape the future of the ecosystem! As a holder, you will have some control over the finances and development of the ecosystem.
+                    Fees collected will be 100% reinvested back into the ecosystem to ensure its continued growth and success.
+                  </p>
+                </div>
+              </div>
+            </div>
+      </div><!--cards end-->
+      <!--cards start--> 
+      <div class="conatiner mt-10 grid grid-flow-row md:grid-flow-col max-w-6xl mx-auto justify-around">
+        <div class="flex justify-center p-8">
+            <div class="rounded-lg shadow-2xl shadow-pink-600 bg-neutral max-w-sm border-2 border-pink-600">
+              <a class="" href="#!">
+                <img class="w-7 mt-5 ml-5" src="img/mdi_head-question-outline.png">
+              </a>
+              <div class="p-6">
+                <h5 class="text-white text-xl font-medium mb-2 text-center">Pony Quest</h5>
+                <p class="text-gray-400 text-base mb-4 text-center">
+                  With PonyQuest, we will give anybody with expertise in marketing, development, design, and other fields the chance to be compensated for their participation and initiative in expanding our ecosystem.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="flex justify-center p-8">
+            <div class="rounded-lg shadow-2xl shadow-pink-600 bg-neutral max-w-sm border-2 border-pink-600">
+              <a href="#!">
+                <img class="w-7 mt-5 ml-5" src="img/fa-brands_digital-ocean.png">
+              </a>
+              <div class="p-6">
+                <h5 class="text-white text-xl font-medium mb-2 text-center">Pony NFT</h5>
+                <p class="text-gray-400 text-base mb-4 text-center">
+                  Invest in a Pony Horde fighter and explore the world for treasure! Your fighter will help you earn more tokens while you farm for the Pony Warriors NFT.
+                </p>
+              </div>
+            </div>
+          </div>
+          
+    </div><!--cards end-->          
+              
+
+
+
+            </div><!--eco cards end-->
+            </section></div><!--eco end-->
+        </div><!--ecosystem end-->
+    </div><!--about end-->
+  </section></div>
+  
+    <!--roadmap start-->
+  <!--roadmap bg color start-->  
+  <div class="bg-gradient-to-b from-gray-800 via-gray-800 to-gray-800">
+    <section id="roadmap"> 
+    <div class="ml-4 mr-4 mt-32">
+      <div class="container pt-16 grid grid-cols-1 max-w-3xl mx-auto place-items-center place-content-center">
+        <div class="ml-16 mr-16 space-y-1 content-center flex-shrink-0">
+            <h1 class="text-center content-center text-white text-2xl text-md md:text-4xl text-xl xl:text-4xl justify-center flex-inline">
+                <span class="text-pink-500 font-semibold">Roadmap</span>
+            </h1>
+        </div>
+    </div><!--subtitle & subtext end-->
+    <!--roadmap card Q1 start-->
+    <div class="conatiner mt-10 grid grid-flow-col-1 md:grid-flow-col max-w-6xl mx-auto justify-start pl-32">
+        <div class="flex justify-center p-8 grid grid-flow-row">
+          <div class="text-center">
+            <h1 class="text-pink-500 text-2xl mb-6 font-medium">Q 1</h1>
+          </div>
+          <div class="rounded-lg shadow-2xl h-45 shadow-pink-600 bg-neutral border-solid border-2 border-pink-500 max-w-sm">
+            <!-- <a href="#!">
+              <img class="w-8 mt-5 ml-5" src="img/hand-coin-light.png"/>
+            </a> -->
+            <div class="p-6">
+              <h5 class="text-white text-xl font-medium mb-2 text-center">Sale</h5>
+              <p class="text-gray-400 text-base mb-4 text-center">
+                Launch PSHIB token and generate momentum for the upcoming marketing strategy in order to raise PSHIB's popularity.
+              </p>
+            </div>
+          </div>
+         <!--- <div class="pt-16 grid grid-cols-1 max-w-3xl mx-auto place-items-center">
+            <img class="object-fill h-55 w-96" src="img/Presale.png">
+          </div>-->
+        </div>
+    </div><!--roadmap card Q1 end-->
+    <!--roadmap card Q2 start-->
+    <div class="conatiner mt-10 grid grid-flow-col-1 md:grid-flow-col max-w-6xl mx-auto justify-end pr-32">
+      <div class="flex justify-center p-8 grid grid-flow-row">
+        <div class="text-center">
+          <h1 class="text-pink-500 text-2xl mb-6 font-medium">Q 2</h1>
+        </div>
+        <div class="rounded-lg shadow-2xl h-45 shadow-pink-600 bg-neutral border-solid border-2 border-pink-500 max-w-sm">
+          <!-- <a href="#!">
+            <img class="w-8 mt-5 ml-5" src="img/hand-coin-light.png"/>
+          </a> -->
+          <div class="p-6">
+            <h5 class="text-white text-xl font-medium mb-2 text-center">Pony Swap</h5>
+            <p class="text-gray-400 text-base mb-4 text-center">
+              Deploy Pony Swap Exhchange for traders and our pony army in order to contribute to the Binance ecosystem.
+            </p>
+          </div>
+        </div>
+       <!--- <div class="pt-16 grid grid-cols-1 max-w-3xl mx-auto place-items-center">
+          <img class="object-fill h-55 w-96" src="img/Presale.png">
+        </div>-->
+      </div>
+  </div><!--roadmap card Q2 end-->
+
+  <!--roadmap card Q3 start-->
+  <div class="conatiner mt-10 grid grid-flow-col-1 md:grid-flow-col max-w-6xl mx-auto justify-start pl-32">
+    <div class="flex justify-center p-8 grid grid-flow-row">
+      <div class="text-center">
+        <h1 class="text-pink-500 text-2xl mb-6 font-medium">Q 3</h1>
+      </div>
+      <div class="rounded-lg shadow-2xl h-45 shadow-pink-600 bg-neutral border-solid border-2 border-pink-500 max-w-sm">
+        <!-- <a href="#!">
+          <img class="w-8 mt-5 ml-5" src="img/hand-coin-light.png"/>
+        </a> -->
+        <div class="p-6">
+          <h5 class="text-white text-xl font-medium mb-2 text-center">Pony Bazaar</h5>
+          <p class="text-gray-400 text-base mb-4 text-center">
+            Release Pony Bazaar in order to help promosing projects to raise capital where each of them is selected by PSHIB holders.
+          </p>
+        </div>
+      </div>
+     <!--- <div class="pt-16 grid grid-cols-1 max-w-3xl mx-auto place-items-center">
+        <img class="object-fill h-55 w-96" src="img/Presale.png">
+      </div>-->
+    </div>
+</div><!--roadmap card Q1 end-->
+<!--roadmap card Q4 start-->
+<div class="conatiner mt-10 -32 grid grid-flow-col-1 md:grid-flow-col max-w-6xl mx-auto justify-end pr-32">
+  <div class="flex justify-center p-8 grid grid-flow-row">
+    <div class="text-center">
+      <h1 class="text-pink-500 text-2xl mb-6 font-medium">Q 4</h1>
+    </div>
+    <div class="rounded-lg shadow-2xl h-45 shadow-pink-600 bg-neutral border-solid border-2 border-pink-500 max-w-sm">
+      <!-- <a href="#!">
+        <img class="w-8 mt-5 ml-5" src="img/hand-coin-light.png"/>
+      </a> -->
+      <div class="p-6">
+        <h5 class="text-white text-xl font-medium mb-2 text-center">Pony Quest</h5>
+        <p class="text-gray-400 text-base mb-4 text-center">
+          Collaboration with people that have expertise in different areas in order to expand and contribute to Pony ecosystem.
+        </p>
+      </div>
+    </div>
+   <!--- <div class="pt-16 grid grid-cols-1 max-w-3xl mx-auto place-items-center">
+      <img class="object-fill h-55 w-96" src="img/Presale.png">
+    </div>-->
+  </div>
+</div><!--roadmap card Q2 end-->
+  
+
+    <div class="container mt-32 mb-32 mb-0 w-75 h-48 max-w-3xl mx-auto place-items-center">
+        <h1 class="mt-16 text-pink-500 font-semibold text-center content-center text-white text-2xl text-md md:text-4xl text-xl xl:text-4xl justify-center">THEY TALK ABOUT US</h1>
+            <br>
+            <div class="ml-4 mr-4 justify-center mt-16">
+              <img class="" src="img/subcover.png">
+           </div>
+    </div>      
+
+    </div><!--roadmap end-->
+    </section>
+  </div><!--roadmap bg color-end--> 
+    <div>
+      <div class="container mt-16 mb-0 w-75 h-48 max-w-3xl mx-auto place-items-center">
+         <div class="grid grid-cols-1 rounded-t-lg place-items-center ">    
+           <!-- <div class="pb-5">
+                <img class="w-36 md:w-72 lg:w-128  bg-neutral" src="img/PSHIB-Token.png">
+            </div>  -->
+            <!-- <div class="pb-5">
+                <img class="w-36 md:w-72 lg:w-128 bg-neutral" src="img/ETH-Token.png">
+            </div> -->
+        </div> 
+    </div>
+  
+<!--footer start-->
+<footer class="w-full h-48 bottom-0 bg-clip-padding backdrop-blur-mditems-center border-t-2 border-gray-700 border-solid">
+    <!--container main start-->  
+      <div class="container grid grid-flow-row sm:grid-flow-col sm:max-w-3xl items-center w-[92%] max-w-5xl mx-auto space-y-5 place-items-center pb-5">
+        <!--container left start-->
+        <div class="container w-48 pl-5">
+          <!--logo start-->
+          <div class="pl-16">
+            <img class="w-24" src="img/Logo.png">
+          </div> <!--logo end-->
+          <!--social start-->
+          <div class="container inline-flex space-x-5 mt-8 mb-8 ml-10">
+              <a href="https://t.me/ponyshibainu" class="hover:bg-pink-300 rounded-full w-10 h-10">
+                  <img class="w-12" src="img/Telegram.svg">
+              </a>
+             <!--
+             <a href="https://www.pinksale.finance" class="hover:bg-pink-300 rounded-full w-10 h-10">
+                <img class="w-12 " src="img/pinksale.png">
+            </a> -->
+            <a href="https://twitter.com/PonyShibaInu" class="hover:bg-pink-300 rounded-full w-10 h-10">
+              <img class="w-12" src="img/Twitter.svg">
+            </a>
+          </div><!--social end-->
+        </div><!--container left end-->
+        <!--disclaimer start-->
+        <div class="ml-5">
+          <h1 class="text-xs"><span class="text-pink-600">Disclaimer</span></h1>
+          <p class="text-gray-400 text-xs">This whitepaper serves solely as a source of information and is not intended to provide investment advice or recommendations 
+            regarding any products discussed herein. As a meme token, Pony Shiba Inu (PSHIB) entails inherent risks, and it is therefore prudent that you seek guidance from a 
+            professional investment advisor prior to making any investment decisions. We strongly advise you to conduct a thorough risk assessment and consult with your investment 
+            advisor before committing any funds. Please note that any investment decisions you make are at your own discretion and risk.
+          </p>
+        </div><!--disclaimer end-->
+        <!--pshibtoken start-->
+        <div class="pl-5 pb">
+          <!--<img class="w-36" src="img/PSHIBToken.png">-->
+        </div> <!--pshibtoken End-->
+      </div><!--container main end-->
+</footer><!--footer end-->
+
+<!-- audit modal start-->
+<div id="Audit" aria-hidden="true" class="hidden overflow-x-hidden overflow-y-auto fixed h-modal md:h-full top-4 left-0 right-0 md:inset-0 z-50 justify-center items-center">
+  <div class="relative w-full max-w-2xl px-4 h-full md:h-auto">
+      <!-- modal content -->
+      <div class=" bg-white rounded-lg shadow relative dark:bg-zinc-900">
+          <!-- modal header -->
+          <div class="flex items-start justify-between p-5 border-b rounded-t dark:border-gray-600">
+              <h3 class="text-gray-900 text-2xl lg:text-2xl font-semibold dark:text-white">
+                Audit
+              </h3>
+              <button type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-toggle="Audit">
+                  <svg class="w-5 h-5" fill="currentColor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>  
+              </button>
+          </div>
+          <!-- modal body -->
+          <div class="p-6 space-y-6">
+
+              <h1 class="text-pink-500 text-xl font-semibold leading-relaxed ">Pony Shiba Inu (PSHIB): A Meme Coin on Binance Blockchain</h1>
+              <hr class="h-0.5">
+              <h2 class="text-gray-400 text-base font-semibold leading-relaxed">The PSHIB smart contract is audited with Certyk</h2>  
+              <div class="pl-5 pb">
+                <img class="w-36" src="img/audit2.png">
+              </div> <!--pshibtoken End-->
+                
+              
+
+          </div>
+          
+          <!-- modal footer -->
+          <div class="flex space-x-2 items-center p-6 border-t border-gray-200 rounded-b dark:border-gray-600">
+              <button data-modal-toggle="Whitepaper" type="button" class="text-white bg-pink-700 hover:bg-pink-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-pink-500 dark:hover:bg-pink-700 dark:focus:ring-pink-500">Exit</button>
+          </div>
+      </div>
+  </div>
+</div><!-- audit modal end-->
+
+
+<!--fb-->
+<script src="../path/to/flowbite/dist/flowbite.min.js"></>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.3/flowbite.min.js"></script>
+
+<script src="/script.js"></script>
+</div></body></html>

